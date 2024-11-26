@@ -14,7 +14,10 @@
         <!-- Navbar -->
         <div class="navbar">
             <div class="menu">
-                <ul>
+                <div class="burger" id="burger-menu">
+                    &#9776; <!-- Бургер-іконка -->
+                </div>
+                <ul id="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#resume">Resume</a></li>
@@ -51,8 +54,6 @@
             <p>Here you can add your portfolio details.</p>
         </div>
 
-
-    
 
         <!-- Contact Section -->
         <div id="contact" class="content" style="background-color: #999;">
@@ -103,5 +104,14 @@
             color: #ff7200; /* Колір значка при наведенні */
         }
     </style>
+
+    <!-- JavaScript для роботи бургер-меню -->
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>

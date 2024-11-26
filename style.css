@@ -18,13 +18,18 @@ body, html {
     height: 100vh; /* Висота на весь екран */
 }
 
+/* Основні стилі для навігації */
 .navbar {
     width: 100%;
     height: 75px;
     position: fixed;
     top: 0;
-    background-color: rgba(0, 0, 0, 0); /* Додаємо фон, щоб навбар був читабельним на всіх секціях */
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .icon {
@@ -43,10 +48,49 @@ body, html {
     margin-top: 5px;
 }
 
+/* Меню і посилання в горизонтальному вигляді для великих екранів */
 .menu {
-    float: none;
-    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+/* Стиль бургер-меню */
+.burger {
+    display: none; /* Сховане для великих екранів */
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .burger {
+        display: block; /* Відображає бургер-меню на мобільних пристроях */
+    }
+
+    ul {
+        display: none; /* Сховати меню по замовчуванню на мобільних */
+        flex-direction: column; /* Вертикальне розташування посилань */
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 75px; /* Під навбаром */
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    ul.show {
+        display: flex; /* Показати меню при натисканні на бургер */
+    }
+
+    ul li {
+        margin: 15px 0; /* Відступи між пунктами меню */
+    }
+}
+
 
 ul {
     display: flex;
