@@ -106,7 +106,7 @@ ul li a:hover {
 
 .content {
     width: 100%;
-    height: 100vh; /* Висота на весь екран */
+    min-height: 100vh; /* Мінімальна висота 100% екрану, але може бути більше */
     display: flex;
     justify-content: flex-start; /* Вирівнювання елементів по верхній частині */
     align-items: flex-start; /* Вирівнювання по лівій стороні */
@@ -116,6 +116,8 @@ ul li a:hover {
     padding: 100px 20px 20px 20px; /* Збільшено верхній відступ для кращого вирівнювання */
     position: relative;
 }
+
+
 
 .home-title {
     margin-bottom: 20px;
@@ -296,4 +298,238 @@ ul li a:hover {
     padding: 50px 20px; /* Відступи всередині секції */
     text-align: center; /* Вирівнюємо текст по центру */
     position: relative; /* Для додавання додаткових елементів поверх фону */
+}
+
+#resume {
+    min-height: 100vh;
+    position: relative; /* Для позиціонування псевдоелемента */
+    /*background: url('background_contact.jpeg') no-repeat center center; /* Встановлюємо зображення як фон */
+    background-size: cover; /* Покриває всю секцію, зберігаючи співвідношення сторін */
+    color: #ffffff; /* Колір тексту */
+    font-size: 30px; /* Розмір шрифту */
+    font-weight: 500;
+    padding: 50px 20px; /* Відступи всередині секції */
+    text-align: center; /* Вирівнюємо текст по центру */
+    overflow: hidden; /* Щоб псевдоелемент не виходив за межі */
+}
+
+
+
+/* Додаємо позиціонування для заголовків і контейнерів, щоб вони знаходилися поверх псевдоелемента */
+#resume h2,
+#resume h3,
+#resume .resume-container {
+    position: relative;
+    z-index: 2; /* Щоб текст та інші елементи були вище градієнта */
+}
+
+
+
+
+
+
+.resume-container {
+    display: flex;
+    align-items: flex-start; /* Вирівнювання елементів по верху */
+    gap: 40px; /* Відстань між контейнером з лініями та іншими елементами */
+    margin-top: 2px; /* Верхній відступ */
+}
+
+
+
+
+
+
+.lines-container {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання елементів */
+    gap: 20px; /* Відстань між лініями */
+}
+
+.line-item {
+    display: flex;
+    align-items: center; /* Вирівнювання іконок/тексту та ліній по вертикалі */
+    gap: 15px; /* Відстань між текстом і лінією */
+}
+
+.line-icon {
+    width: 30px; /* Ширина іконки */
+    height: 30px; /* Висота іконки */
+}
+.line-text {
+    min-width: 100px; /* Встановлення мінімальної ширини для тексту */
+    text-align: right; /* Вирівнювання тексту праворуч */
+}
+
+.line {
+    flex-grow: 1; /* Займає весь доступний простір, щоб забезпечити однакову довжину для всіх ліній */
+    position: relative;
+    width: 150px; /* Довжина лінії */
+    height: 3px; /* Товщина лінії */
+    background-color: #201d1d; /* Колір лінії */
+    border-radius: 3px; /* Закруглені краї */
+    border: 1px solid #d5d5d5; /* Окантовка навколо лінії (білий колір) */
+}
+
+.circle {
+    position: absolute;
+    top: 50%; /* Вирівнювання по вертикалі по центру лінії */
+    transform: translateY(-50%); /* Вирівнювання по вертикалі по центру */
+    width: 12px; /* Діаметр кружка */
+    height: 12px; /* Діаметр кружка */
+    background-color: #ffffff; /* Колір кружка, відмінний від кольору лінії */
+    border-radius: 50%; /* Зробити елемент круглим */
+    border: 1px solid #ff7200; /* Окантовка навколо кружка (інший колір) */
+}
+
+.line-text {
+    font-family: 'Arial', sans-serif; /* Шрифт для тексту */
+    font-size: 16px; /* Розмір тексту */
+    color: #b6b3b3; /* Колір тексту */
+    margin-right: 15px; /* Відстань між текстом і лінією */
+}
+
+
+h3 {
+    font-family: 'Playfair Display', serif; /* Вибраний шрифт */
+    font-size: 24px; /* Розмір заголовка */
+    color: #ffffff; /* Білий колір тексту */
+    margin-bottom: 18px; /* Відступ знизу для відокремлення від наступного контенту */
+    margin-top: 10px; /* Збільшений відступ зверху для відокремлення від попереднього контенту */
+    text-align: center; /* Вирівнювання тексту по лівому краю */
+}
+
+
+
+
+
+.resume-container {
+    display: flex;
+    align-items: flex-start; /* Вирівнювання елементів по верху */
+    gap: 40px; /* Відстань між секціями Skills і Experience */
+    margin-top: 2px; /* Верхній відступ */
+}
+
+/* Секція Skills */
+.skills-section {
+    flex: 1;
+}
+
+.experience-section {
+    flex: 1;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column; /* Вертикальне розташування елементів */
+    align-items: center;
+    gap: 20px; /* Відстань між пунктами досвіду */
+    margin-top: 20px;
+}
+
+.experience-item {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 20px; /* Внутрішні відступи для тексту всередині прямокутника */
+    border: 2px solid #ff7200; /* Окантовка прямокутника */
+    border-radius: 5px; /* Злегка закруглені краї */
+    background-color: rgba(255, 114, 0, 0.1); /* Напівпрозорий фон для кращого вигляду */
+    width: fit-content; /* Ширина підлаштовується під текст */
+}
+
+.experience-line {
+    width: 2px; /* Ширина вертикальної лінії */
+    height: 20px; /* Висота лінії */
+    background-color: #ff7200; /* Колір лінії */
+    border-radius: 1px; /* Закруглені краї лінії */
+}
+
+.education-section {
+    margin-top: 40px; /* Верхній відступ, щоб відокремити від попереднього контенту */
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+}
+
+.education-container {
+    margin-top: 20px; /* Відступ зверху для відокремлення заголовка від списку */
+}
+
+.course-list {
+    display: flex;
+    flex-direction: column; /* Встановлюємо вертикальне розташування списку */
+    gap: 10px; /* Відстань між пунктами списку */
+    list-style-type: disc; /* Додає маркери перед кожним пунктом списку */
+    padding-left: 20px; /* Відступ зліва для маркерів списку */
+    font-family: 'Arial', sans-serif; /* Шрифт для тексту */
+    font-size: 18px; /* Розмір тексту */
+    color: #ffffff; /* Колір тексту */
+    line-height: 1.8; /* Збільшена міжрядкова відстань для кращої читабельності */
+}
+
+.resume-container {
+    display: flex; /* Встановлює горизонтальне розташування елементів */
+    gap: 40px; /* Відстань між секціями */
+    align-items: flex-start; /* Вирівнює елементи по верху */
+    margin-top: 20px; /* Відступ зверху для контейнера */
+}
+
+.skills-section {
+    flex: 1; /* Займає всю доступну ширину в межах контейнера */
+}
+
+.right-container {
+    flex: 1; /* Займає всю доступну ширину поруч зі Skills */
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання Experience та Education */
+    gap: 30px; /* Відстань між Experience та Education */
+}
+
+.experience-section, .education-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Додає легкий фон для виділення секції */
+    padding: 10px; /* Відступи всередині контейнера */
+    border-radius: 8px; /* Закруглені краї контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для надання об'єму */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання елементів */
+    align-items: center; /* Центрування елементів по горизонталі */
+    gap: 10px; /* Відстань між елементами досвіду */
+}
+
+.experience-item {
+    padding: 10px;
+    background-color: #333; /* Фон для досвіду */
+    border-radius: 5px; /* Закруглені краї */
+    width: 50%; /* Щоб текст займав всю доступну ширину */
+    text-align: center;
+}
+
+.experience-line {
+    width: 2px; /* Товщина лінії */
+    height: 20px; /* Висота лінії */
+    background-color: #ffffff; /* Колір лінії */
+    margin: 5px 0; /* Відступи зверху і знизу */
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання курсів */
+    gap: 10px; /* Відстань між пунктами списку */
+}
+
+.course-list {
+    list-style-type: none; /* Видалення стандартних маркерів списку */
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 10px;
+    background-color: #444; /* Фон для кожного елемента списку */
+    border-radius: 5px; /* Закруглені краї */
 }
