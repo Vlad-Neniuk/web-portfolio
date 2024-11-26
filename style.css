@@ -32,22 +32,6 @@ body, html {
     padding: 0 20px;
 }
 
-.icon {
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    color: #ff0000;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 20px;
-    float: left;
-    padding-top: 10px;
-    margin-top: 5px;
-}
-
 /* Меню і посилання в горизонтальному вигляді для великих екранів */
 .menu {
     display: flex;
@@ -68,6 +52,9 @@ body, html {
 @media (max-width: 768px) {
     .burger {
         display: block; /* Відображає бургер-меню на мобільних пристроях */
+        position: absolute;
+        right: 20px; /* Розташування бургер-меню праворуч */
+        top: 20px;
     }
 
     ul {
@@ -91,7 +78,7 @@ body, html {
     }
 }
 
-
+/* Основні стилі списку навігації */
 ul {
     display: flex;
     justify-content: center;
@@ -101,7 +88,7 @@ ul {
 
 ul li {
     list-style: none;
-    margin-left: 62px;
+    margin-left: 30px; /* Зменшений відступ для покращення вигляду */
     font-size: 14px;
 }
 
@@ -115,11 +102,6 @@ ul li a {
 
 ul li a:hover {
     color: #fe0000;
-}
-
-.search {
-    float: right;
-    margin-right: 20px;
 }
 
 .content {
@@ -140,25 +122,22 @@ ul li a:hover {
     margin-top: 150px;
 }
 
-.viktoriia {
+.viktoriia, .lienova, .photographer {
     font-family: 'Playfair Display', serif;
+}
+
+.viktoriia {
     font-size: 45px; /* Розмір шрифту */
     color: #f30000; /* Колір тексту */
     font-weight: 100; /* Тонка лінія літер */
     margin-top: 200px;
 }
 
-
 .lienova {
-    font-family: 'Playfair Display', serif;
     font-size: 70px;
     color: #ff0000;
     font-weight: 500;
 }
-
-
-
-
 
 .photographer {
     font-family: 'Cormorant Garamond', serif;
@@ -202,7 +181,6 @@ ul li a:hover {
     background: linear-gradient(to top, rgb(34 32 32 / 90%) 10%, rgb(43 3 3 / 80%) 90%);
     border-radius: 10px;
     padding: 25px;
-   
     margin: 20px auto; 
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
 }
@@ -285,34 +263,6 @@ ul li a:hover {
     text-align: center;
 }
 
-.icons a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.icons ion-icon {
-    color: #fff;
-    font-size: 30px;
-    padding-left: 14px;
-    padding-top: 5px;
-    transition: 0.3s ease;
-}
-
-.icons ion-icon:hover {
-    color: #ff7200;
-}
-
-#contact {
-    background: url('background_contact.jpeg') no-repeat center center; /* Встановлюємо зображення як фон */
-    background-size: cover; /* Покриває всю секцію, зберігаючи співвідношення сторін */
-    color: #ff0000; /* Колір тексту на випадок, якщо зображення темне */
-    font-size: 30px; /* Розмір шрифту */
-    font-weight: 500;
-    padding: 50px 20px; /* Відступи всередині секції */
-    text-align: center; /* Вирівнюємо текст по центру */
-    position: relative; /* Для додавання додаткових елементів поверх фону */
-}
-/* CSS для кнопок з іконками */
 .icons {
     display: flex; /* Встановлюємо горизонтальне вирівнювання */
     justify-content: center; /* Вирівнюємо іконки по центру */
@@ -335,4 +285,15 @@ ul li a:hover {
     width: 50px; /* Встановлюємо ширину для всіх іконок */
     height: 50px; /* Встановлюємо висоту для всіх іконок */
     transition: 0.3s ease; /* Плавна зміна для наведення */
+}
+
+#contact {
+    background: url('background_contact.jpeg') no-repeat center center; /* Встановлюємо зображення як фон */
+    background-size: cover; /* Покриває всю секцію, зберігаючи співвідношення сторін */
+    color: #ff0000; /* Колір тексту на випадок, якщо зображення темне */
+    font-size: 30px; /* Розмір шрифту */
+    font-weight: 500;
+    padding: 50px 20px; /* Відступи всередині секції */
+    text-align: center; /* Вирівнюємо текст по центру */
+    position: relative; /* Для додавання додаткових елементів поверх фону */
 }
