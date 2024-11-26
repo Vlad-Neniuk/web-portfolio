@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключаємо конкретну версію Ionicons -->
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div> 
+
+        <!-- Home Section -->
+        <div id="home" class="content">
+            <h1 class="home-title">
+                <span class="viktoriia">Viktoriia</span><br>
+                <span class="lienova">Lienova</span><br>
+                <span class="photographer">photographer</span>
+            </h1>
+        </div>
+
+        <!-- About Section -->
+        <div id="about" class="content" style="background-color: #333;">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus mi a sapien gravida, in tincidunt erat scelerisque.</p>
+        </div>
+
+        <!-- Resume Section -->
+        <div id="resume" class="content" style="background-color: #555;">
+            <h2>Resume</h2>
+            <p>Here you can add your resume details.</p>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div id="portfolio" class="content" style="background-color: #777;">
+            <h2>Portfolio</h2>
+            <p>Here you can add your portfolio details.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="content" style="background-color: #999;">
+            <h2>Contact</h2>
+            <p>Here you can add your contact details.</p>
+
+            <div class="form">
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-telegram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSS для стилізації значків -->
+    <style>
+        .icons a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 15px; /* Відступ між значками */
+        }
+
+        .icons ion-icon {
+            font-size: 40px; /* Розмір значка */
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #ff7200; /* Колір значка при наведенні */
+        }
+    </style>
+</body>
+</html>
