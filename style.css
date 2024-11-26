@@ -44,7 +44,7 @@ body, html {
 }
 
 .menu {
-    float: left;
+    float: none;
     height: 70px;
 }
 
@@ -153,12 +153,14 @@ ul li a:hover {
 }
 
 .form {
-    width: 250px;
+    width: 650px;
     height: auto;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+    background: linear-gradient(to top, rgb(34 32 32 / 90%) 10%, rgb(43 3 3 / 80%) 90%);
     border-radius: 10px;
     padding: 25px;
-    margin-top: 20px;
+   
+    margin: 20px auto; 
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.9);
 }
 
 .form h2 {
@@ -254,4 +256,39 @@ ul li a:hover {
 
 .icons ion-icon:hover {
     color: #ff7200;
+}
+
+#contact {
+    background: url('background_contact.jpeg') no-repeat center center; /* Встановлюємо зображення як фон */
+    background-size: cover; /* Покриває всю секцію, зберігаючи співвідношення сторін */
+    color: #ff0000; /* Колір тексту на випадок, якщо зображення темне */
+    font-size: 30px; /* Розмір шрифту */
+    font-weight: 500;
+    padding: 50px 20px; /* Відступи всередині секції */
+    text-align: center; /* Вирівнюємо текст по центру */
+    position: relative; /* Для додавання додаткових елементів поверх фону */
+}
+/* CSS для кнопок з іконками */
+.icons {
+    display: flex; /* Встановлюємо горизонтальне вирівнювання */
+    justify-content: center; /* Вирівнюємо іконки по центру */
+    flex-wrap: wrap; /* Включаємо перенесення, якщо недостатньо місця */
+    gap: 20px; /* Відстань між іконками */
+    padding: 20px 0; /* Додаємо відступи зверху та знизу */
+}
+
+.icons a {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.icons a:hover {
+    transform: scale(1.1); /* Збільшуємо іконку при наведенні */
+}
+
+.icon-image {
+    width: 50px; /* Встановлюємо ширину для всіх іконок */
+    height: 50px; /* Встановлюємо висоту для всіх іконок */
+    transition: 0.3s ease; /* Плавна зміна для наведення */
 }
